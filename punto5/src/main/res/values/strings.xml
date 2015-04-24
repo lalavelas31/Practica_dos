@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="nombre">Nombre</string>
+    <string name="hint_nombre">Ingrese nombre</string>
+    <string name="correo">Correo</string>
+    <string name="hint_correo">Ingrese correo</string>
+    <string name="telefono">Telefono</string>
+    <string name="hint_telefono">Ingrese teléfono</string>
+    <string name="genero">Género</string>
+    <string name="femenino">Femenino</string>
+    <string name="masculino">Masculino</string>
+    <string name="ciudad">Ciudad</string>
+    <string name="hobbies">Hobbies</string>
+    <string name="patinar">Patinar</string>
+    <string name="bailar">Bailar</string>
+    <string name="dormir">Dormir</string>
+    <string name="leer">Leer</string>
+    <string name="fecha">Fecha de nacimiento</string>
+    <string name="ok">OK</string>
+    <string-array name="ciudades">
+        <item>Escoja una ciudad</item>
+        <item>Arauca</item>
+        <item>Armenia</item>
+        <item>Barranquilla</item>
+        <item>Bogotá</item>
+        <item>Bucaramanga</item>
+        <item>Cali</item>
+        <item>Cartagena</item>
+        <item>Cúcuta</item>
+        <item>Florencia</item>
+        <item>Ibagué</item>
+        <item>Inírida</item>
+        <item>Leticia</item>
+        <item>Manizales</item>
+        <item>Medellín</item>
+        <item>Mitú</item>
+        <item>Mocoa</item>
+        <item>Montería</item>
+        <item>Neiva</item>
+        <item>Pasto</item>
+        <item>Pereira</item>
+        <item>Popayán</item>
+        <item>Puerto carreño</item>
+        <item>Quibdó</item>
+        <item>Rioacha</item>
+        <item>San Andres</item>
+        <item>San José del Guaviare</item>
+        <item>Santa Marta</item>
+        <item>Sincelejo</item>
+        <item>Tunja</item>
+        <item>Valledupar</item>
+        <item>Villavicencio</item>
+        <item>Yopal</item>
+
+
+
+    </string-array>
+
+</resources>

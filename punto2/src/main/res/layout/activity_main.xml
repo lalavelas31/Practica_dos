@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/blue"
+            android:text="@string/numero1"
+            android:textSize="25dp"
+         />
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:hint="@string/hint_numero"
+            android:textSize="25dp"
+            android:inputType="numberDecimal"
+            android:id="@+id/e_numero1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/blue"
+            android:text="@string/numero2"
+            android:textSize="25dp"/>
+
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/gray"
+            android:hint="@string/hint_numero"
+            android:textSize="25dp"
+            android:inputType="numberDecimal"
+            android:id="@+id/e_numero2"/>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+     <RadioGroup
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="20dp"
+         android:orientation="vertical"
+         android:id="@+id/rg_todos">
+
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/suma"
+        android:textSize="30dp"
+        android:textColor="@color/blue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rb_suma"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/resta"
+        android:textSize="30dp"
+        android:textColor="@color/blue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rb_resta"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/multiplicación"
+        android:textSize="30dp"
+        android:textColor="@color/blue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rb_multiplicacion"
+        android:onClick="onRadioButtonClicked"/>
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/division"
+        android:textSize="30dp"
+        android:textColor="@color/blue"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rb_division"
+        android:onClick="onRadioButtonClicked"/>
+
+     </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/b_calcular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="@string/resultado"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/t_resultado"/>
+
+</LinearLayout>

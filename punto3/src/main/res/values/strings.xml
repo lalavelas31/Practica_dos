@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="quices">Quices</string>
+    <string name="exposiciones">Exposiciones</string>
+    <string name="laboratorio">Laboratorio</string>
+    <string name="proyecto_final">Proyecto</string>
+    <string name="hint">Ingrese la nota</string>
+    <string name="boton">Calcular definitiva</string>
+    <string name="definitiva">Nota Definitiva</string>
+</resources>
