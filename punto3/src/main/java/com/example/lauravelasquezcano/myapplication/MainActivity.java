@@ -13,6 +13,7 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
     double n_quices,n_expo,n_lab,n_pfinal,n_def;
     String nota_final;
+    TextView definitiva;
 
 
     @Override
@@ -27,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
 
         Button calcular = (Button) findViewById(R.id.b_calcular);
 
-        final TextView definitiva = (TextView) findViewById(R.id.t_definitiva);
+         definitiva = (TextView) findViewById(R.id.t_definitiva);
 
 
 
@@ -47,6 +48,17 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+    }
+
+    protected void onSaveInstanceState(Bundle sostener){
+        super.onSaveInstanceState(sostener);
+        sostener.putString("clave",nota_final);
+    }
+
+    protected void onRestoreInstanceState(Bundle rehacer){
+        super.onRestoreInstanceState(rehacer);
+        nota_final=rehacer.getString("clave");
+        definitiva.setText(nota_final);
     }
 
 

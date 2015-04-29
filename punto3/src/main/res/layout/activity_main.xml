@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="15dp">
+    android:background="@drawable/fondo"
+    >
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -14,16 +15,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="@string/quices"
-            android:textSize="25dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle.grande"
             android:layout_weight="2"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:hint="@string/hint"
-            android:textColor="@color/gray"
-            android:textSize="25dp"
+           android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:id="@+id/e_quices"
             android:inputType="numberDecimal"/>
@@ -39,16 +38,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="@string/exposiciones"
-            android:textSize="25dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle.grande"
             android:layout_weight="1"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:hint="@string/hint"
-            android:textColor="@color/gray"
-            android:textSize="25dp"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:id="@+id/e_exposiciones"
             android:inputType="numberDecimal"/>
@@ -64,16 +61,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="@string/laboratorio"
-            android:textSize="25dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle.grande"
             android:layout_weight="1"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:hint="@string/hint"
-            android:textColor="@color/gray"
-            android:textSize="25dp"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:id="@+id/e_laboratorio"
             android:inputType="numberDecimal"/>
@@ -90,16 +85,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:text="@string/proyecto_final"
-            android:textSize="25dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle.grande"
             android:layout_weight="2"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:hint="@string/hint"
-            android:textColor="@color/gray"
-            android:textSize="25dp"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:id="@+id/e_proyecto_final"
             android:inputType="numberDecimal"/>
@@ -120,6 +113,7 @@
         android:textSize="30dp"
         android:layout_marginTop="20dp"
         android:gravity="center"
-        android:id="@+id/t_definitiva"/>
+        android:id="@+id/t_definitiva"
+        android:textColor="@color/darkgreen"/>
 
 </LinearLayout>

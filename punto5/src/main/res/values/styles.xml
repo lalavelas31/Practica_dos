@@ -5,4 +5,19 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="TextViewStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="EditTextStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/lightseagreen</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">18dp</item>
+        <item name="android:textColor">@color/lightseagreen</item>
+    </style>
+
 </resources>

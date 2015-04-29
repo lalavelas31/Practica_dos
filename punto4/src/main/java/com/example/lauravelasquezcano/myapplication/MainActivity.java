@@ -15,6 +15,8 @@ public class MainActivity extends ActionBarActivity {
     int operacion;
     double lado,base,altura,radio;
     String finalresult;
+    TextView resultado;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         RadioButton rb_rectangulo=(RadioButton) findViewById(R.id.rb_rectangulo);
         RadioButton rb_circulo=(RadioButton) findViewById(R.id.rb_circulo);
 
-        final TextView resultado=(TextView) findViewById(R.id.t_area);
+        resultado=(TextView) findViewById(R.id.t_area);
 
         Button calcular=(Button) findViewById(R.id.b_calcular);
 
@@ -38,6 +40,17 @@ public class MainActivity extends ActionBarActivity {
         });
 
 
+    }
+
+    protected void onSaveInstanceState(Bundle sostener){
+        super.onSaveInstanceState(sostener);
+        sostener.putString("clave",finalresult);
+    }
+
+    protected void onRestoreInstanceState(Bundle rehacer){
+        super.onRestoreInstanceState(rehacer);
+        finalresult=rehacer.getString("clave");
+       resultado.setText(finalresult);
     }
 
     private boolean isEmpty(EditText myeditText) {

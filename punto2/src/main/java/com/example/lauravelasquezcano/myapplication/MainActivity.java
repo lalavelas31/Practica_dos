@@ -18,8 +18,9 @@ public class MainActivity extends ActionBarActivity {
 
     int operacion;
     double num1;
-    double num2;
+    double num2,resultado;
     String finalresult;
+    TextView result;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-        final TextView result=(TextView) findViewById(R.id.t_resultado);
+        result=(TextView) findViewById(R.id.t_resultado);
 
         Button b_calcular=(Button) findViewById(R.id.b_calcular);
 
@@ -45,6 +46,17 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+    }
+
+    protected void onSaveInstanceState(Bundle sostener){
+        super.onSaveInstanceState(sostener);
+        sostener.putString("clave",finalresult);
+    }
+
+    protected void onRestoreInstanceState(Bundle rehacer){
+        super.onRestoreInstanceState(rehacer);
+        finalresult=rehacer.getString("clave");
+        result.setText(finalresult);
     }
 
 
@@ -82,7 +94,7 @@ public class MainActivity extends ActionBarActivity {
                 break;
         }
 
-        double resultado=0;
+
         switch(operacion){
             case 1:
                 resultado=num1+num2;

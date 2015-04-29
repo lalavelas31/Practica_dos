@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo">
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -18,16 +19,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/nombre"
-            android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle"
             android:layout_weight="1"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_nombre"
-            android:textSize="20dp"
-            android:textColor="@color/gray"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:inputType="textPersonName"
             android:id="@+id/e_nombre"/>
@@ -43,16 +42,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/correo"
-            android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle"
             android:layout_weight="1"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_correo"
-            android:textSize="20dp"
-            android:textColor="@color/gray"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:inputType="textEmailAddress"
             android:id="@+id/e_correo"/>
@@ -68,16 +65,14 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/telefono"
-            android:textSize="20dp"
-            android:textColor="@color/blue"
+            android:textAppearance="@style/TextViewStyle"
             android:layout_weight="1"/>
 
         <EditText
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/hint_telefono"
-            android:textSize="20dp"
-            android:textColor="@color/gray"
+            android:textAppearance="@style/EditTextStyle"
             android:layout_weight="1"
             android:inputType="phone"
             android:id="@+id/e_telefono"/>
@@ -93,8 +88,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/genero"
-                android:textSize="20dp"
-               android:textColor="@color/blue"
+                android:textAppearance="@style/TextViewStyle"
                 android:layout_weight="2"/>
 
             <RadioGroup
@@ -107,8 +101,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="@string/femenino"
-                    android:textSize="18dp"
-                    android:textColor="@color/gray"
+                    android:textAppearance="@style/RadioButtonStyle"
                     android:layout_weight="1"
                     android:id="@+id/rb_femenino"
                     android:onClick="onRadioButtonClicked"/>
@@ -117,8 +110,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:text="@string/masculino"
-                    android:textSize="18dp"
-                    android:textColor="@color/gray"
+                    android:textAppearance="@style/RadioButtonStyle"
                     android:layout_weight="1"
                     android:id="@+id/rb_masculino"
                     android:onClick="onRadioButtonClicked"/>
@@ -135,8 +127,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/ciudad"
-                android:textSize="20dp"
-                android:textColor="@color/blue"
+                android:textAppearance="@style/TextViewStyle"
                 android:layout_weight="2"/>
 
             <Spinner
@@ -159,8 +150,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/hobbies"
-                    android:textSize="20dp"
-                    android:textColor="@color/blue"
+                    android:textAppearance="@style/TextViewStyle"
                     android:layout_weight="2"/>
 
                 <LinearLayout

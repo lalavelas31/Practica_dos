@@ -19,8 +19,9 @@ import android.widget.TextView;
 public class MainActivity extends ActionBarActivity {
 
 
-    String genero,hobbie;
+    String genero,hobbie,nombre1,correo1,telefono1,genero1,hobbie1,fecha1,ciudad1;
     int posicion;
+    TextView mostrar_nombre,mostrar_correo,mostrar_telefono,mostrar_genero,mostrar_hobbies,mostrar_ciudad,mostrar_fecha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,13 +32,13 @@ public class MainActivity extends ActionBarActivity {
         final EditText correo=(EditText) findViewById(R.id.e_correo);
         final EditText telefono=(EditText) findViewById(R.id.e_telefono);
 
-        final TextView mostrar_nombre=(TextView) findViewById(R.id.t_nombre);
-        final TextView mostrar_correo=(TextView) findViewById(R.id.t_correo);
-        final TextView mostrar_telefono=(TextView) findViewById(R.id.t_telefono);
-        final TextView mostrar_genero=(TextView) findViewById(R.id.t_genero);
-        final TextView mostrar_hobbies=(TextView) findViewById(R.id.t_hobbies);
-        final TextView mostrar_ciudad=(TextView) findViewById(R.id.t_ciudad);
-        final TextView mostrar_fecha=(TextView) findViewById(R.id.t_fecha);
+        mostrar_nombre=(TextView) findViewById(R.id.t_nombre);
+        mostrar_correo=(TextView) findViewById(R.id.t_correo);
+        mostrar_telefono=(TextView) findViewById(R.id.t_telefono);
+        mostrar_genero=(TextView) findViewById(R.id.t_genero);
+        mostrar_hobbies=(TextView) findViewById(R.id.t_hobbies);
+        mostrar_ciudad=(TextView) findViewById(R.id.t_ciudad);
+        mostrar_fecha=(TextView) findViewById(R.id.t_fecha);
 
         final Spinner ciudad=(Spinner) findViewById(R.id.sp_ciudad);
         final ArrayAdapter<CharSequence> ciudad_array=ArrayAdapter.createFromResource(this,R.array.ciudades,android.R.layout.simple_spinner_item);
@@ -88,16 +89,46 @@ public class MainActivity extends ActionBarActivity {
 
 
 
-                    mostrar_nombre.setText(nombre.getText().toString());
-                    mostrar_correo.setText(correo.getText().toString());
-                    mostrar_telefono.setText(telefono.getText().toString());
-                    mostrar_genero.setText(genero);
-                    mostrar_hobbies.setText(hobbie);
-                    mostrar_ciudad.setText(ciudad_array.getItem(posicion));
-                    mostrar_fecha.setText(calendario.getDayOfMonth()+"/"+(calendario.getMonth()+1)+"/"+calendario.getYear());
+                    mostrar_nombre.setText(nombre1=nombre.getText().toString());
+                    mostrar_correo.setText(correo1=correo.getText().toString());
+                    mostrar_telefono.setText(telefono1=telefono.getText().toString());
+                    mostrar_genero.setText(genero1=genero);
+                    mostrar_hobbies.setText(hobbie1=hobbie);
+                    mostrar_ciudad.setText(ciudad1=(ciudad_array.getItem(posicion)).toString());
+                    mostrar_fecha.setText(fecha1=calendario.getDayOfMonth()+"/"+(calendario.getMonth()+1)+"/"+calendario.getYear());
 
             }
         });
+    }
+
+    protected void onSaveInstanceState(Bundle sostener){
+        super.onSaveInstanceState(sostener);
+        sostener.putString("clave",nombre1);
+        sostener.putString("clave1",correo1);
+        sostener.putString("clave2",telefono1);
+        sostener.putString("clave3",genero1);
+        sostener.putString("clave4",hobbie1);
+        sostener.putString("clave5",ciudad1);
+        sostener.putString("clave6",fecha1);
+    }
+
+    protected void onRestoreInstanceState(Bundle rehacer){
+        super.onRestoreInstanceState(rehacer);
+        nombre1=rehacer.getString("clave");
+        mostrar_nombre.setText(nombre1);
+        correo1=rehacer.getString("clave1");
+        mostrar_correo.setText(correo1);
+        telefono1=rehacer.getString("clave2");
+        mostrar_telefono.setText(telefono1);
+        genero1=rehacer.getString("clave3");
+        mostrar_genero.setText(genero1);
+        hobbie1=rehacer.getString("clave4");
+        mostrar_hobbies.setText(hobbie1);
+        ciudad1=rehacer.getString("clave5");
+        mostrar_ciudad.setText(ciudad1);
+        fecha1=rehacer.getString("clave6");
+        mostrar_fecha.setText(fecha1);
+
     }
 
 
